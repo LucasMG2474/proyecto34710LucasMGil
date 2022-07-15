@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Com. 34710 Lucas Martín Gil reactJS
         </a>
       </header>
     </div>
