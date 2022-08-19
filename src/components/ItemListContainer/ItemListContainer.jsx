@@ -1,15 +1,36 @@
 import { useState, useEffect } from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import { useParams } from "react-router-dom";
 import getItems from "../../dataBase/getItems";
 import ItemList from "../ItemList/ItemList";
 
+function arrayProductos() {
+  return new Promise((resolve, reject) => {
+    const condicion = true;
+    if (condicion) {
+      setTimeout(() => {
+        resolve(getItems);
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        reject("404 not Found");
+      }, 2000);
+    }
+  });
+}
 const ItemListContainer = (props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const idCategoria = useParams().idCategoria;
+
   useEffect(() => {
-    getItems
+    arrayProductos()
       .then((res) => {
-        setProducts(res);
+        if (idCategoria === undefined) {
+          setProducts(res);
+        } else {
+          let prodFiltrado = res.filter((el) => el.categoria === idCategoria);
+          setProducts(prodFiltrado);
+        }
       })
       .catch((err) => alert(err))
       .finally(() => setLoading(false));
@@ -25,7 +46,6 @@ const ItemListContainer = (props) => {
       ) : (
         <ItemList products={products} />
       )}
-      <ItemCount initial={1} stock={5} />
     </div>
   );
 };

@@ -1,47 +1,100 @@
-const productos = [
+const getItems = [
   {
     id: 1,
-    nombre: "Disco Rigido",
+    nombre: "HD Westerm Digital",
     precio: 7000,
+    descrip: " Westerm Digital S.ata3 W. Digital 1 Tera 7200rpm 64mb",
+    categoria: "almacenamiento",
     foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660047749/compuTech/hd_zneaqt.png",
   },
   {
     id: 2,
-    nombre: "Monitor",
+    nombre: "Monitor Asus",
     precio: 48000,
+    descrip: "Monitor gamer Asus 27UL500 led ",
+    categoria: "monitor",
     foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660047749/compuTech/moni_bfexkq.png",
   },
   {
     id: 3,
-    nombre: "Placa Madre",
+    nombre: "Placa Madre Asus",
     precio: 39000,
+    descrip: "Motherboard Asus Prime B460m-a S1200 Intel B460 Hdmi R2.0",
+    categoria: "placa madre",
     foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660047749/compuTech/asus_elmfww.png",
   },
   {
     id: 4,
-    nombre: "Mouse",
+    nombre: "Mouse Redragon",
     precio: 3806,
+    descrip: "Redragon Griffin M607 negro",
+    categoria: "mouse",
     foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660047749/compuTech/mouse_qovard.png",
   },
   {
     id: 5,
-    nombre: "Memoria Ram",
+    nombre: "Memoria Ram Kingston",
     precio: 13784,
+    descrip: "Memoria RAM Fury Beast DDR4 gamer color negro 8GB 1 Kingston",
+    categoria: "memoria",
     foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660047748/compuTech/ram_kd5ur9.jpg",
   },
+  {
+    id: 6,
+    nombre: "Memoria Ram Crucial",
+    precio: 7299,
+    descrip: "moria RAM color verde 8GB 1 Crucial CT8G4DFS8266",
+    categoria: "memoria",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660757461/compuTech/corsair_gcaf34.jpg",
+  },
+  {
+    id: 7,
+    nombre: "SSD Kingston",
+    precio: 5223,
+    descrip: "Disco sólido interno Kingston SA400S37/240G 240GB negro",
+    categoria: "almacenamiento",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660758256/compuTech/ssd_itxer0.jpg",
+  },
+  {
+    id: 8,
+    nombre: "Monitor Samsung",
+    precio: 45784,
+    descrip: "Monitor gamer Samsung F24T35 led 24 azul y gris oscuro 100V/240V",
+    categoria: "monitor",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660758256/compuTech/monisam_gm5qsz.jpg",
+  },
+  {
+    id: 9,
+    nombre: "Placa Madre Gigabyte",
+    precio: 18784,
+    descrip: "Motherboard Gigabyte Amd Ga-b450m Ds3h Am4 Ryzen B450 Ddr4",
+    categoria: "placa madre",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660758256/compuTech/giga_weelir.jpg",
+  },
+  {
+    id: 10,
+    nombre: "Mouse Logitech",
+    precio: 2988,
+    descrip: "Mouse inalámbrico Logitech M280 negro",
+    categoria: "mouse",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660758256/compuTech/mlogi_aituhi.jpg",
+  },
+  {
+    id: 11,
+    nombre: "Gabinete Aerocool",
+    precio: 11784,
+    descrip: "Gabinete Gamer Aerocool Atx Vidrio Templado X1 Fan Rgb",
+    categoria: "gabinete",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660758256/compuTech/gabinete1_wpyovm.jpg",
+  },
+  {
+    id: 12,
+    nombre: "Gabinete Sentey",
+    precio: 11784,
+    descrip: "Gabinete Gamer Sentey F300 Negro Cooler Con Led Azul 4x120mm",
+    categoria: "gabinete",
+    foto: "https://res.cloudinary.com/lg-tech/image/upload/v1660758256/compuTech/gabinete2_wxwrww.jpg",
+  },
 ];
-
-export const getItems = new Promise((resolve, reject) => {
-  const condicion = true;
-  if (condicion) {
-    setTimeout(() => {
-      resolve(productos);
-    }, 2000);
-  } else {
-    setTimeout(() => {
-      reject("404 not Found");
-    }, 2000);
-  }
-});
 
 export default getItems;

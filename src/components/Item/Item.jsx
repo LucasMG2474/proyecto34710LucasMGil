@@ -1,7 +1,5 @@
+import { Link } from "react-router-dom";
 const Item = ({ prod }) => {
-  const detalle = () => {
-    alert("información del producto detallada");
-  };
   return (
     <div className="row">
       <div className="col-auto">
@@ -10,13 +8,7 @@ const Item = ({ prod }) => {
           <div className="card-body">
             <h5 className="card-title">{prod.nombre}</h5>
             <p className="card-text">${prod.precio}</p>
-            <button
-              type="button"
-              className="btn btn-outline-info m-2"
-              onClick={detalle}
-            >
-              Detalle del producto
-            </button>
+            <Link to={`/detalle/${prod.id}`}> Detalle del producto</Link>
           </div>
         </div>
       </div>
