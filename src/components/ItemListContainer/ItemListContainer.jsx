@@ -20,7 +20,7 @@ function arrayProductos() {
 const ItemListContainer = (props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const idCategoria = useParams().idCategoria;
+  const { idCategoria } = useParams();
 
   useEffect(() => {
     arrayProductos()
